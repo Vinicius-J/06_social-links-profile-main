@@ -23,7 +23,6 @@
 }
 html{
     font-size: 62.5%;
-    overflow: hidden;
 }
 body{
     background-color: var(--Grey-900);
@@ -44,7 +43,9 @@ a{
 }
 .attribution {
     font-size: 1.1rem;
-    text-align: center; }
+    text-align: center;
+    margin: 2rem 0;
+}
 .attribution a {
     color: hsl(228, 45%, 44%);
     font-size: 1.1rem;
@@ -63,8 +64,8 @@ section.card{
     flex-direction: column;
     align-items: center;
     padding: var(--margin-3);
-    margin: var(--margin-3) 0;
-
+    margin: var(--margin-1) 0;
+    box-shadow: rgba(0, 0, 0, 0.35) 0 0.3rem 0.8rem;
 }
 
 img{
@@ -73,12 +74,21 @@ img{
     margin-bottom: var(--margin-3);
     margin-top: var(--margin-2);
     border: solid 0.5rem var(--Grey-700);
+    transition: all 250ms ease;
+}
+img:hover{
+    transform: scale(1.1);
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
 }
 
 h1.name{
     font-size: 2.5rem;
     font-weight: 500;
     margin-bottom: var(--margin-1);
+}
+
+h1, p{
+    cursor: default;
 }
 
 p.green{
@@ -112,11 +122,8 @@ span.social a:hover{
     color: var(--Grey-900);
 }
 
-@media(max-width: 375px){
-    body{
-        justify-content: space-around;
-    }
-    section.card{
+@media(max-width: 768px){
+   section.card{
         margin: var(--margin-1) 0;
         padding: var(--margin-1);
     }
